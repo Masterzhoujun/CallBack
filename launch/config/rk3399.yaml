@@ -1,0 +1,38 @@
+# The modifications of the output file from Kalibr:
+# 1. For each matrix (e.g. cam0/T_cam_imu), remove the brackets and minus sign for each line. Use one pair of brackets for each matrix.
+# 2. Add the T_imu_body at the end of the calibration file (usually set to identity).
+cam0:
+  T_cam_imu:
+    [0.99902607,   0.00890284,  -0.04321639,   0.06212579,
+    -0.04343608,   0.02617033,  -0.99871338,  -0.00305825,
+    -0.0077604,    0.99961785,   0.02653154,  -0.08472782,
+                     0,                   0,                   0,   1.000000000000000]
+  camera_model: pinhole
+  distortion_coeffs: [-0.23455377, 0.0417252, -0.0004291, -0.001343279]
+  distortion_model: radtan
+  intrinsics: [270.162, 271.870, 312.390, 245.217]
+  resolution: [640, 480]
+  timeshift_cam_imu: 0.0
+cam1:
+  T_cam_imu:
+    [0.9998511,   0.016915,  -0.0034152,  -0.0035227,
+    -0.00387505,  0.02722824,   -0.99962173,  -0.00133304,
+     -0.01681561,   0.99948612,   0.02728973,  -0.08600943,
+                     0,                   0,                   0,   1.000000000000000]
+  T_cn_cnm1:
+    [0.99917549,   -0.03957614,   0.00905868,  -0.06495079, 
+    0.03957118,   0.99921649,   0.0007264,   -0.00067403,
+    -0.00908033,  -0.00036734,   0.99995871,  -0.00072211, 
+                     0,                   0,                   0,   1.000000000000000]
+  camera_model: pinhole
+  distortion_coeffs: [-0.250719,  0.05188, -0.00067369, -0.00066298]
+  distortion_model: radtan
+  intrinsics: [270.627, 272.246, 313.707, 313.707]
+  resolution: [640, 480]
+  timeshift_cam_imu: 0.0
+T_imu_body:
+  [1.0000, 0.0000, 0.0000, 0.0000,
+  0.0000, 1.0000, 0.0000, 0.0000,
+  0.0000, 0.0000, 1.0000, 0.0000,
+  0.0000, 0.0000, 0.0000, 1.0000]
+
